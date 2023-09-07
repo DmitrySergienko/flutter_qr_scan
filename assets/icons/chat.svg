@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="26"
+   height="24.375"
+   viewBox="0 0 26 24.375"
+   fill="none"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="52921d31c6581f1ef102e326e4789634.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0" />
+  <g
+     id="003-chat"
+     clip-path="url(#clip0_1_488)"
+     transform="translate(-0.5,-0.8125)">
+    <g
+       id="Group">
+      <g
+         id="Group_2">
+        <path
+           id="Vector"
+           d="M 13.4492,0.8125 C 6.30887,0.8125 0.5,5.93775 0.5,12.2383 c 0,2.6615 1.0533,5.2405 2.97025,7.2847 0.37938,1.5643 -0.0811,3.2216 -1.22368,4.3642 -0.47775,0.4778 -0.1399,1.3003 0.53859,1.3003 2.17059,0 4.26308,-0.8502 5.81775,-2.3499 1.53829,0.549 3.16589,0.8265 4.84629,0.8265 C 20.5896,23.6641 26.5,18.5388 26.5,12.2383 26.5,5.93775 20.5896,0.8125 13.4492,0.8125 Z M 7.45703,14.5234 c -1.26008,0 -2.28515,-1.025 -2.28515,-2.2851 0,-1.2601 1.02507,-2.28518 2.28515,-2.28518 1.26009,0 2.28516,1.02508 2.28516,2.28518 0,1.2601 -1.02507,2.2851 -2.28516,2.2851 z m 6.09377,0 c -1.2601,0 -2.2852,-1.025 -2.2852,-2.2851 0,-1.2601 1.0251,-2.28518 2.2852,-2.28518 1.2601,0 2.2851,1.02508 2.2851,2.28518 0,1.2601 -1.025,2.2851 -2.2851,2.2851 z m 6.0937,0 c -1.2601,0 -2.2851,-1.025 -2.2851,-2.2851 0,-1.2601 1.025,-2.28518 2.2851,-2.28518 1.2601,0 2.2852,1.02508 2.2852,2.28518 0,1.2601 -1.0251,2.2851 -2.2852,2.2851 z"
+           fill="#979797" />
+      </g>
+    </g>
+  </g>
+  <defs
+     id="defs9">
+    <clipPath
+       id="clip0_1_488">
+      <rect
+         width="26"
+         height="26"
+         fill="#ffffff"
+         transform="translate(0.5)"
+         id="rect6"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+</svg>
