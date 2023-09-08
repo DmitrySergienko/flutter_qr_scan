@@ -23,12 +23,12 @@ class CategoryButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
         ),
-        onPressed: onPressed,
+        onPressed: onPressed ?? () {},
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             icon,
-            const SizedBox(height: 8), // Spacing between icon and text
+            const SizedBox(height: 8),
             Text(
               title,
               textAlign: TextAlign.center,
