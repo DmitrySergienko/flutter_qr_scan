@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 class URLLauncherPage extends StatelessWidget {
   final String url;
 
-  URLLauncherPage({required this.url});
+  const URLLauncherPage({super.key, required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class URLLauncherPage extends StatelessWidget {
             Text(url),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => _launchURL('https://google.com'),
+              onPressed: () => _launchURL(url),
               child: const Text('Open in Browser'),
             ),
           ],
@@ -28,11 +28,30 @@ class URLLauncherPage extends StatelessWidget {
     );
   }
 
-  void _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      print('Could not launch $url');
+  _launchURL(String my_url) async {
+    final Uri url = Uri.parse(my_url);
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $my_url');
+    }
+
+    void _showErrorDialog(BuildContext context, String message) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Error'),
+            content: Text(message),
+            actions: [
+              TextButton(
+                child: Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
     }
   }
 }
