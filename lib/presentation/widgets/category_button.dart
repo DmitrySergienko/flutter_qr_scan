@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 
 class CategoryButton extends StatelessWidget {
   const CategoryButton({
+    super.key,
     required this.title,
     required this.icon,
+    this.onPressed,
   });
   final String title;
   final Widget icon;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,7 @@ class CategoryButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

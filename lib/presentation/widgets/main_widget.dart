@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_scan/presentation/widgets/categories_screen.dart';
+import 'package:qr_scan/presentation/widgets/news_widget.dart';
 import 'package:qr_scan/presentation/widgets/tile_widget.dart';
 
 class MainWidget extends StatefulWidget {
@@ -23,10 +24,26 @@ class _MainWidget extends State<MainWidget> {
           ),
           color: Color(0xfff4f5fa),
         ),
-        child: const Column(
-          children: [TitleWidget(), CategoriesScreen()],
+        child: Column(
+          children: [
+            const SizedBox(height: 10),
+            const TitleWidget(
+              title: 'ИЗБРАННОЕ',
+              icon: null,
+            ),
+            const SizedBox(height: 10),
+            const CategoriesScreen(),
+            const SizedBox(height: 10),
+            const TitleWidget(
+              title: 'НОВОСТИ',
+              icon: Icon(Icons.arrow_forward_ios, color: Color(0xFF8A898E)),
+            ),
+            const SizedBox(height: 10),
+            NewsWidget()
+          ],
         ),
       ),
     );
   }
 }
+//const 
