@@ -15,6 +15,7 @@ class CategoryButton extends StatelessWidget {
       height: 94,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),
