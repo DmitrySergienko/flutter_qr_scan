@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:qr_scan/presentation/screens/main_screen.dart';
-import 'package:qr_scan/presentation/widgets/categories_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -64,7 +63,7 @@ class _TabsScreen extends State<TabsScreen> {
 
         // Name text using title
         title: const Text(
-          'Person Name',
+          'Name',
           style: TextStyle(
             color: Colors.white,
           ),
@@ -75,8 +74,7 @@ class _TabsScreen extends State<TabsScreen> {
             Icons.notifications,
             color: Colors.white,
           ),
-          SizedBox(
-              width: 8.0), // For some spacing between the icon and the edge
+          SizedBox(width: 8.0),
         ],
       ),
       body: activePage,

@@ -13,9 +13,9 @@ class _SearchWidgetState extends State<SearchWidget> {
       height: 40,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
-        color: Color(0x26ffffff),
+        color: const Color(0x26ffffff),
       ),
-      padding: EdgeInsets.symmetric(horizontal: 10.0),
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
       child: const Row(
         children: [
           Expanded(

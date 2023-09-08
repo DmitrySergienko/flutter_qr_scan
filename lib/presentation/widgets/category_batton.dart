@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CategoryButton extends StatelessWidget {
-  const CategoryButton({Key? key}) : super(key: key);
+  const CategoryButton({
+    required this.title,
+    required this.icon,
+  });
+  final String title;
+  final Widget icon;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 100,
-      height: 100,
+      width: 94,
+      height: 94,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
@@ -15,15 +20,17 @@ class CategoryButton extends StatelessWidget {
           ),
         ),
         onPressed: () {},
-        child: const Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.wallet),
-            SizedBox(
-                height: 8), // Optional: add a spacing between icon and text
+            icon,
+            const SizedBox(height: 8), // Spacing between icon and text
             Text(
-              'QR',
-              style: TextStyle(fontSize: 14),
+              title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 11,
+              ),
             ),
           ],
         ),

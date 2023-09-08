@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_scan/presentation/widgets/categories_screen.dart';
+import 'package:qr_scan/presentation/widgets/tile_widget.dart';
 
 class MainWidget extends StatefulWidget {
   const MainWidget({super.key});
@@ -13,21 +14,17 @@ class _MainWidget extends State<MainWidget> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        width: 375,
+        width: double.infinity,
         height: 616,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(
-                20), // You can change the value to what you want
-            topRight: Radius.circular(
-                20), // Same value as topLeft for symmetrical corners
+            topLeft: Radius.circular(12),
+            topRight: Radius.circular(12),
           ),
           color: Color(0xfff4f5fa),
         ),
-        child: Card(
-          child: Column(
-            children: [CategoriesScreen()],
-          ),
+        child: const Column(
+          children: [TitleWidget(), CategoriesScreen()],
         ),
       ),
     );

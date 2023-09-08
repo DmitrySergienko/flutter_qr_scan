@@ -11,22 +11,19 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Color primaryColor = Theme.of(context).primaryColor;
 
-    Widget content = Center(
-      child: Column(
-        children: [
-          const SizedBox(height: 10),
-          BalanceWidget(),
-          const SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: SearchWidget(),
-          ),
-          const SizedBox(height: 10),
-          const MainWidget(),
-        ],
-      ),
+    Widget content = Column(
+      children: [
+        const SizedBox(height: 10),
+        BalanceWidget(),
+        const SizedBox(height: 10),
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: SearchWidget(),
+        ),
+        const SizedBox(height: 10),
+        const MainWidget(),
+      ],
     );
-
     return Container(
       color: primaryColor,
       child: content,

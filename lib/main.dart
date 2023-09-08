@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qr_scan/presentation/screens/tabs_screen.dart';
 
-final theme = ThemeData(
-  useMaterial3: true,
-  primaryColor: Color.fromARGB(255, 58, 116, 243),
-  colorScheme: ColorScheme.fromSeed(
-    //brightness: Brightness.light,
-    seedColor: const Color.fromARGB(121, 5, 74, 193),
-  ),
-  textTheme: GoogleFonts.aBeeZeeTextTheme(),
+//add color scheme
+var kColorScheme =
+    ColorScheme.fromSeed(seedColor: const Color.fromARGB(121, 5, 163, 220));
+
+//add Dark color scheme
+var kDarkColorTheme = ColorScheme.fromSeed(
+  brightness: Brightness.dark,
+  seedColor: const Color.fromARGB(255, 5, 90, 125),
 );
 
 void main() {
@@ -23,6 +23,31 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: theme, home: const TabsScreen());
+    return MaterialApp(
+      darkTheme: ThemeData.dark().copyWith(
+        useMaterial3: true,
+        colorScheme: kDarkColorTheme,
+
+        //add button scheme for dark mode
+        elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: kDarkColorTheme.primaryContainer)),
+      ),
+      theme: ThemeData().copyWith(
+          useMaterial3: true,
+          colorScheme: kColorScheme,
+
+          //add button scheme
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: kColorScheme.primaryContainer)),
+          textTheme: ThemeData().textTheme.copyWith(
+              titleLarge: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  color: kColorScheme.onPrimaryContainer,
+                  fontSize: 18))),
+      themeMode: ThemeMode.system,
+      home: const TabsScreen(),
+    );
   }
 }

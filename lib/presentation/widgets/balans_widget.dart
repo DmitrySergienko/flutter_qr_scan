@@ -18,9 +18,9 @@ class _BalanceWidgetState extends State<BalanceWidget> {
                 Padding(
                   padding: EdgeInsets.only(left: 12),
                   child: Text(
-                    "Name",
+                    "Баланс кошелька ImPay",
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 16,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
@@ -29,9 +29,9 @@ class _BalanceWidgetState extends State<BalanceWidget> {
                 Padding(
                   padding: EdgeInsets.only(right: 12),
                   child: Text(
-                    '12345,56 rub',
+                    '5 485,67 ₽',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 16,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                     ),
