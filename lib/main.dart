@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qr_scan/presentation/screens/tabs_screen.dart';
 
-
 final theme = ThemeData(
   useMaterial3: true,
+  primaryColor: Color.fromARGB(255, 58, 116, 243),
   colorScheme: ColorScheme.fromSeed(
-    brightness: Brightness.light,
-    seedColor: const Color.fromARGB(121, 5, 163, 220),
+    //brightness: Brightness.light,
+    seedColor: const Color.fromARGB(121, 5, 74, 193),
   ),
   textTheme: GoogleFonts.aBeeZeeTextTheme(),
 );
