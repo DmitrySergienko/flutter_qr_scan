@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:qr_scan/presentation/screens/url_luncher_page.dart';
 
 void main() => runApp(const MaterialApp(home: QrScanerScreen()));
 
@@ -27,9 +28,26 @@ class _QrScanerScreenState extends State<QrScanerScreen> {
   void _onQRViewCreated(QRViewController controller) {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
-      // Do something with the scanned data (e.g. navigate to another screen or display some feedback)
-      print('QR Code scanned: ${scanData.code}');
+      final scannedURL = scanData.code;
+      print('QR Code scanned: $scannedURL');
+
+      // Pause the scanner
+      controller.pauseCamera();
+
+      _navigateToURLLauncherPage(scannedURL!);
     });
+  }
+
+  void _navigateToURLLauncherPage(String url) async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => URLLauncherPage(url: url),
+      ),
+    );
+
+    // Resume the scanner once back from URLLauncherPage
+    controller?.resumeCamera();
   }
 
   @override
