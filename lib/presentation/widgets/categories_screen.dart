@@ -4,7 +4,7 @@ import 'package:qr_scan/presentation/widgets/category_button.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class CategoriesScreen extends StatefulWidget {
-  const CategoriesScreen({Key? key}) : super(key: key); // Change made here
+  const CategoriesScreen({Key? key}) : super(key: key);
 
   @override
   _CategoriesScreenState createState() => _CategoriesScreenState();
@@ -26,28 +26,30 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      // Removed the const keyword
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        const CategoryButton(
-          title: 'Мои платежи',
-          icon: Icon(Icons.wallet, color: Colors.blue),
-        ),
-        const CategoryButton(
-          title: 'Билеты',
-          icon: Icon(Icons.airplane_ticket, color: Colors.blue),
-        ),
-        const CategoryButton(
-          title: 'Карты лояльности',
-          icon: Icon(Icons.credit_card, color: Colors.blue),
-        ),
-        CategoryButton(
-          title: 'QR-оплата',
-          icon: const Icon(Icons.qr_code_scanner, color: Colors.blue),
-          onPressed: _callQRScan, // Change made here
-        ),
-      ],
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          const CategoryButton(
+            title: 'Мои платежи',
+            icon: Icon(Icons.wallet, color: Colors.blue),
+          ),
+          const CategoryButton(
+            title: 'Билеты',
+            icon: Icon(Icons.airplane_ticket, color: Colors.blue),
+          ),
+          const CategoryButton(
+            title: 'Карты лояльности',
+            icon: Icon(Icons.credit_card, color: Colors.blue),
+          ),
+          CategoryButton(
+            title: 'QR-оплата',
+            icon: const Icon(Icons.qr_code_scanner, color: Colors.blue),
+            onPressed: _callQRScan,
+          ),
+        ],
+      ),
     );
   }
 }

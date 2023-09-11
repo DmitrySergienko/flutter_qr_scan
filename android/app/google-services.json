@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "126827463336",
+    "project_id": "flutter-qr-scaner",
+    "storage_bucket": "flutter-qr-scaner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126827463336:android:2634ef64d876e72967b89d",
+        "android_client_info": {
+          "package_name": "com.example.qr_scan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB203jOpe4ydZFUoZshEkmC4LRT8wbhdk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

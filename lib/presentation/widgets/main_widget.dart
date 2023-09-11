@@ -24,21 +24,21 @@ class _MainWidget extends State<MainWidget> {
           ),
           color: Color(0xfff4f5fa),
         ),
-        child: Column(
+        child: const Column(
           children: [
-            const SizedBox(height: 10),
-            const TitleWidget(
+            SizedBox(height: 10),
+            TitleWidget(
               title: 'ИЗБРАННОЕ',
               icon: null,
             ),
-            const SizedBox(height: 10),
-            const CategoriesScreen(),
-            const SizedBox(height: 10),
-            const TitleWidget(
+            SizedBox(height: 10),
+            CategoriesScreen(),
+            SizedBox(height: 10),
+            TitleWidget(
               title: 'НОВОСТИ',
               icon: Icon(Icons.arrow_forward_ios, color: Color(0xFF8A898E)),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             NewsWidget()
           ],
         ),

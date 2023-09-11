@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qr_scan/presentation/screens/tabs_screen.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 //add color scheme
 var kColorScheme =
     ColorScheme.fromSeed(seedColor: const Color.fromARGB(121, 5, 163, 220));
@@ -11,7 +14,12 @@ var kDarkColorTheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(255, 5, 90, 125),
 );
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(
     const App(),
   );
